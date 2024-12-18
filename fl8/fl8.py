@@ -9,10 +9,10 @@ def find_by_ext(ext, directory):
     else:
         print(f'Error: {directory} doesn\'t exist or is not a valid directory!')
 
-# Example usage
-files = find_by_ext('py', '/home/floris/Downloads')
-if files:
-    for file in files:
-        print(file)
-
-		
+def find_by_name(name, directory):
+    directory_path = Path(directory)  # Convert string to Path object
+    if directory_path.exists() and directory_path.is_dir():
+        files = list(directory_path.rglob(f"*{name}*"))  # Find files containing 'name' in their name
+        return files
+    else:
+        print(f'Error: {directory} doesn\'t exist or is not a valid directory!')
