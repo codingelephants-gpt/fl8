@@ -13,3 +13,5 @@ os, pathlib
 `sudo apt install pip`
 3. Open your new unzipped fl8 file in your terminal and execute the following command:
 `pip install .`
+
+This project is licensed under the MIT license.
